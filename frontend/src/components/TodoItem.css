@@ -1,0 +1,135 @@
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  transition: all 0.3s ease;
+  gap: 15px;
+}
+
+.todo-item:hover {
+  border-color: #667eea;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+}
+
+.todo-item.completed {
+  background: #f9f9f9;
+}
+
+.todo-item.completed .todo-title {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.todo-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.todo-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #667eea;
+  flex-shrink: 0;
+}
+
+.todo-title {
+  color: #333;
+  font-size: 1.05rem;
+  margin: 0;
+  flex: 1;
+  word-break: break-word;
+}
+
+.priority-badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.priority-low {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.priority-medium {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.priority-high {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.todo-description {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+.todo-meta {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.todo-date {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.delete-btn:hover {
+  opacity: 1;
+  background: #fee;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .todo-item {
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .todo-header {
+    width: 100%;
+  }
+
+  .delete-btn {
+    align-self: flex-start;
+    margin-left: auto;
+  }
+}
